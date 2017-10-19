@@ -1,0 +1,67 @@
+<!--Import-->
+
+<svg [attr.width]="appearance.screen.width" [attr.height]="appearance.screen.height" [attr.viewBox]="'0 0 '+appearance.screen.width+' '+appearance.screen.height">
+  <!--Lighting-->
+  <defs id="lighting">
+    <radialGradient id="main-rim-light" cx="100" cy="50" r="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0.103" style="stop-color:#FFFFFF" />
+      <stop offset="0.275" style="stop-color:#C5D3DF;stop-opacity:0.8083" />
+      <stop offset="0.5403" style="stop-color:#7292B1;stop-opacity:0.5125" />
+      <stop offset="0.7579" style="stop-color:#346390;stop-opacity:0.2699" />
+      <stop offset="0.9167" style="stop-color:#0E467B;stop-opacity:0.0929" />
+      <stop offset="1" style="stop-color:#003B73;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient 
+      id="eye-rim-light-left" 
+      cx="1" 
+      cy=".5" 
+      r=".5" 
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0.103" style="stop-color:#FFFFFF" />
+      <stop offset="0.275" style="stop-color:#C5D3DF;stop-opacity:0.8083" />
+      <stop offset="0.5403" style="stop-color:#7292B1;stop-opacity:0.5125" />
+      <stop offset="0.7579" style="stop-color:#346390;stop-opacity:0.2699" />
+      <stop offset="0.9167" style="stop-color:#0E467B;stop-opacity:0.0929" />
+      <stop offset="1" style="stop-color:#003B73;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient 
+      id="eye-rim-light-right" 
+      cx="1" 
+      cy=".5" 
+      r=".5" 
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0.103" style="stop-color:#FFFFFF" />
+      <stop offset="0.275" style="stop-color:#C5D3DF;stop-opacity:0.8083" />
+      <stop offset="0.5403" style="stop-color:#7292B1;stop-opacity:0.5125" />
+      <stop offset="0.7579" style="stop-color:#346390;stop-opacity:0.2699" />
+      <stop offset="0.9167" style="stop-color:#0E467B;stop-opacity:0.0929" />
+      <stop offset="1" style="stop-color:#003B73;stop-opacity:0" />
+    </radialGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10 10" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="glow"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!--masks-->
+  <defs id="masks">
+      <clipPath id="eye-clipping-left">
+          <path class='emote-mask' id="eye-left-emote-mask" d="M95,25c0-11-9-20-20-20H25C14,5,5,14,5,25v50c0,11,9,20,20,20h50c11,0,20-9,20-20V25z"/>
+      </clipPath>
+      <clipPath id="eye-clipping-right">
+          <path class='emote-mask' id="eye-right-emote-mask" d="M95,25c0-11-9-20-20-20H25C14,5,5,14,5,25v50c0,11,9,20,20,20h50c11,0,20-9,20-20V25z"/>
+      </clipPath>
+  </defs>
+
+  <g id='move-wrapper'>
+    <use href="#avatar" [attr.width]="appearance.avatar.size" [attr.height]="appearance.avatar.size"/>
+  </g>
+</svg>
+
+
+<router-outlet></router-outlet>

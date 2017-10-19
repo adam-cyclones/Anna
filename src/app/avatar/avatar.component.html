@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  
+  <symbol id="avatar" [attr.width]="appearance.avatar.size" [attr.height]="appearance.avatar.size" viewBox="0 0 100 100">
+    <circle id='avatar-size' [attr.fill]="appearance.avatar.outerDiskColor" cx="50" cy="50" r="50" />
+    <circle class="rim-lighting" clip-path="url(#boundry-mask)" fill="url(#main-rim-light)" cx="50" cy="50" r="50" />
+    <circle id="face-screen" [attr.fill]="appearance.avatar.innerDiskColor" cx="50" cy="50" r="45" />
+    <g id="eyes">
+      <use href="#eye-template-left" x="25" y="30" [attr.width]="appearance.avatar.eyeSize" [attr.height]="appearance.avatar.eyeSize" />
+      <use href="#eye-template-right" x="55" y="30" [attr.width]="appearance.avatar.eyeSize" [attr.height]="appearance.avatar.eyeSize" />
+    </g>
+  </symbol>
+
+  <symbol id="eye-template-left" viewBox="0 0 100 100">
+    <rect clip-path="url(#eye-clipping-left)" id="eye-color-left" [attr.fill]="appearance.avatar.eyeColor" width="100" height="100"/>
+  </symbol>
+
+  <symbol id="eye-template-right" viewBox="0 0 100 100">
+      <rect clip-path="url(#eye-clipping-right)" id="eye-color-right" [attr.fill]="appearance.avatar.eyeColor" width="100" height="100"/>
+  </symbol>
+
+</svg>

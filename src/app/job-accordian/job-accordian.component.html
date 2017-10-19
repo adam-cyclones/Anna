@@ -1,0 +1,16 @@
+
+<div class='toggle'>
+    <h4>{{roleData.role}}</h4>
+    <p>{{roleData.about}}</p>
+    <div>
+      <small *ngIf='roleData.available.length > 0'><b>{{roleData.available.length}}</b> related jobs on <b>https://careers.dyson.com</b></small>
+      <br>
+      <ul *ngIf='roleData.available.length > 0'>
+        <li *ngFor='let real of roleData.available'>{{real}}</li>
+      </ul>
+      <small class='fineprint' *ngIf='roleData.available.length > 0'>If there aren't any jobs listed here which you would like to explore, there may still be something in the works, why not have a chat with us or sign up your email at the bottom of the page.</small>
+      <small class='fineprint' *ngIf='roleData.available.length === 0'>Looks like there aren't any {{roleData.role}} related jobs listed yet, there may still be something in the works, why not have a chat with us or sign up your email at the bottom of the page?</small>
+
+    </div>
+    <hr>
+</div>

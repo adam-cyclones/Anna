@@ -1,0 +1,38 @@
+[
+    {
+        "role":"Developers",
+        "available":[
+            "Java Developer",
+            "Digital Support Analyst"
+        ],
+        "about":"Familiar with front and back end code, a developer at Dyson gets involved in every aspect of making digital products shine. Working closely with Business and UX Analysts, a developer will work across multiple platforms and disciplines. All development is conducted using Agile or Kanban processes and projects can flex and bend as required – just to keep the developers on their toes. You’ll be well supported and sought after for your expertise by the rest of the company – your opinion will be listened to."
+    },
+    {
+        "role":"Project managers",
+        "available":[
+
+        ],
+        "about":"Wrangling budgets, timelines and stakeholders all comes into a Project Manager’s day to day life at Dyson. You’ll need to be on top of several projects at once and keep up communications between all areas of your various teams. Making sure projects are delivered on budget and on time are some of your main goals, but you also take into account the product owner’s & stakeholders’ requirements.        "
+    },
+    {
+        "role":"Creatives",
+        "available":[
+
+        ],
+        "about":"The backbone of a strong brand presence, a creative team member is responsible for all things look and feel across Dyson. In particular we’re talking digital – you’ll be familiar with design for adaptive and responsive builds and work closely with UX Analysts and Creative Directors. You’ll get final say on your designs once built by the in-house development team and get input throughout digital projects."
+    },
+    {
+        "role":"UX",
+        "available":[
+
+        ],
+        "about":"Used to analysing data to see behaviours, a UX Analyst should also be well versed in conducting research. They’ll be creating questionnaires as well as conducting interviews and focus groups with target audiences from around the world. A grounding in the psychology behind commercial UX and experience in ecommerce will give you a real head start in this role."
+    },
+    {
+        "role":"Testers",
+        "available":[
+
+        ],
+        "about":"Digital products would be no good if it weren’t for a rigorous testing regime. Dyson practices Behaviour Driven Development, which means we test against real use cases. Accessibility, automated and manual testing across all devices falls into the remit of this specialist team. Often embedded into a project team, a tester will be the final point in marking a story as done."
+    }
+]

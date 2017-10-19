@@ -1,0 +1,69 @@
+p,
+small,
+form{
+    font-size: 20px;
+}
+
+input{
+    height:69px;
+}
+
+input,
+button{
+    margin: 0;
+}
+input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    flex: 1;
+}
+button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+form{
+    display: flex;
+}
+
+
+.qr{
+    transform: translateY(43px);
+    float: right;
+    flex: 1;
+    height: 97px;
+    width:97px;
+    background-size: cover;
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQMAAABB54RGAAAABlBMVEX///8AAABVwtN+AAABUklEQVRoge3ZTY7DIAyGYaQeIEfi6jlSDzCSB/zD0KSos8OV3m/RlOTJygoxpBRCCCHk2yKen1Lqs41r+yfnEadPaCpqg6MBeT76tYfocL4KTUN7Ec9+rbY/TflQiw3NSrWw4aHJqYFz/EAzUj0EaO+5/8yv0E10NCRTTT/1LtBN9BKnawDdSb1+R1TX2/7+stMHEpqJWr8ouiobP0U7/gJNR/vKWb1Wcq6zrdSgmWgZp3usF7HbS7lOn9DN1Ov34kXGThU0G4366W6iDmXxNoTupn0PUStpqRI7VbdJE5qARndv5fS4gqajYhuJ15nzjL0PaBo63WSJOdQWANBU1MHY7K3TdpWs97Oge6gN7i3+m8JC99P4uPLS7MtqfoVmoSLekFjbL7fHEJqH+qewuFLX3zih26ge/gp7jOdwrLChaagnOhD7uDI4NBUlhBBCviO/2ShrokNNCP4AAAAASUVORK5CYII=');
+    &:after{
+        position: relative;
+        right:88px;
+        top: 9px;
+        content:'https://careers.dyson.com';
+        font-size: 16px;
+        text-align: right;
+
+    }
+}
+
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.job-list{
+    list-style: none;
+    font-size: 28px;
+}
+
+.summery{
+    h1{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    p{
+        font-size: 32px;
+    }
+    font-size: 50%;
+}

@@ -1,0 +1,31 @@
+<h1>Anna's Friends</h1>
+
+<table class="u-full-width">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Contactable</th>
+        <th>Email</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let data of annaData'>
+        <td>{{data.name}}</td>
+        <td><ul><li *ngFor='let role of data.score.all'>{{role.role}} : {{role.value}}</li></ul></td>
+        <td>
+            <b class='{{data.email?"good":"bad"}}'>{{ data.email ? 'Y' : 'N' }}</b>
+        </td>
+        <td>
+          <a *ngIf='data.email' class='fake-link'>{{data.email}}</a>
+          <p *ngIf='!data.email'>N/A</p>
+        </td>
+        <td><a (click)='delete(data.guid)' class='fake-link delete'>Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)='refresh()' class='primary'>Refresh</button>
+  <button (click)='flush()'>Flush Data</button>
+  <button (click)='downloadJSON()' class='pull-right'>Download data from {{annaData.length}} tests</button>

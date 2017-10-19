@@ -1,0 +1,73 @@
+<div class="container">
+
+  <div class='summery'>
+    <h5 class='sub-heading'>Your a match!</h5>
+    <div class="personality-test__result"  *ngIf='bestMatch === "project-manager"'>
+      <h1>Project manager</h1>
+      <p>Based on your answers I think you are <span class="green">personable</span>, <span class="orange">positive</span>, <span class="red">have great communcation ability</span> &amp; <span class="teal">able to pick up new skills easily</span>.</p>
+      <p>You can also be <span class="green">innovative</span>, <span class="orange">perceptive</span> &amp; <span class="orredange">supportive</span>.</p>
+    </div>
+      
+    <div class="personality-test__result" *ngIf='bestMatch === "tester"'>
+      <h1>Tester</h1>
+      <p>Based on your answers I think you are <span class="green">great working in a team, a </span> <span class="orange">good listener</span> and are <span class="red">results focused.</span> You can also be <span class="teal">positive</span>, <span class="green">analytical</span> & <span class="orange">enjoy solving problems.</span></p>
+    </div>
+    
+  
+    <div class="personality-test__result" *ngIf='bestMatch === "developer"'>
+      <h1>Developer</h1>
+      <p>Based on your answers I think you are <span class="green">supportive</span>, <span class="orange">love to solve problems</span> and are <span class="red">great working in a team</span>. You can also be <span class="teal">positive</span>, <span class="green">a good learner</span> and <span class="orange">able to pick up new skills easily</span>.</p>
+    </div>
+    
+    <div class="personality-test__result" *ngIf='bestMatch === "creative"'>
+      <h1>Creative</h1>
+      <p>Based on your answers I think you are <span class="green">personable</span>, <span class="orange">positive</span>, <span class="teal">able to pick up new skills easily</span> &amp; also have <span class="red">great communcation ability</span>.</p>
+    </div>
+    
+    <div class="personality-test__result" *ngIf='bestMatch === "ux"'> 
+      <h1>UX</h1>
+      <p>Based on your answers I think you are <span class="green">supportive</span>, <span class="orange">love to solve problems</span>, have <span class="teal">great communcation ability</span> and are <span class="red">results focused</span>.</p>
+      <p>You can also be <span class="green">positive</span>, <span class="orange">a good listener</span> &amp; <span class="teal">intelligent</span>.</p>
+    </div>
+    <br>
+  </div>
+
+  <p>{{username}}, would you like to have a friendly chat about <b>careers at Dyson?</b> Please provide an email address.</p>
+  <div class='row'>
+    
+    <div>
+      <form #f="ngForm" (ngSubmit)='saveForm(f.value)' novalidate>
+        <input [disabled]='lockEmail' placeholder="Email Address" name='email' type='email' ngModel/>
+        <button [disabled]='lockEmail' type='submit'>{{emailMeBtnText}}</button>
+      </form>
+    </div>
+
+  <hr>
+  <h2>{{jobListTitle}}</h2>
+  <ul class='job-list'>
+    <li *ngFor='let j of jobRoles'>
+      <app-job-accordian [roleData]='j'></app-job-accordian>
+    </li>
+  </ul>
+
+    <h2 *ngIf='emailMeBtnText !== "Thanks!"'>{{interestedTitle}}</h2>
+    <p *ngIf='emailMeBtnText !== "Thanks!"'>{{username}}, would you like to have a friendly chat about <b>careers at Dyson?</b></p>
+    <div class='row'>
+      
+      <div *ngIf='emailMeBtnText !== "Thanks!"'>
+        <form #f="ngForm" (ngSubmit)='saveForm(f.value)' novalidate>
+          <input autocomplete="off" placeholder="{{username}} what is your Email Address?" name='email' type='text' ngModel/>
+          <button type='submit'>{{emailMeBtnText}}</button>
+        </form>
+      </div>
+
+    <div class='twelve columns'>
+      
+      <a href="#">
+        <button>Start Over</button>
+      </a>
+      <div class='qr'></div>
+    </div>
+
+  </div>
+</div>
